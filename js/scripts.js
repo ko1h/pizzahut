@@ -10,8 +10,8 @@ function UserPizza (name, size, topping) {
   this.name = name,
   this.size = size,
   this.topping = topping,
-  this.Price = 15;
   this.calculatePrice(totalPrice)
+  this.Price = 15;
 }
 UserPizza.prototype.calculaterPrice = function(totalPrice) {
   if(this.size === "orignal") {
@@ -19,7 +19,7 @@ UserPizza.prototype.calculaterPrice = function(totalPrice) {
   }else if (this.size  === "large") {
     this.price += 3; {
       else (this.size  === "small" ) {
-        this.price -=3;
+        this.price -= 3;
       }
     }
   }
@@ -27,6 +27,8 @@ UserPizza.prototype.calculaterPrice = function(totalPrice) {
 
 
 $(document).ready(function(){
+  var topOption = [cheese, icecream, wholefish, more pizza!]
+  populateTopping(topOption);
   $("#pizza").submit(function(event){
     even.preventDefault();
     var inputName = $("input#nameInput").val();
