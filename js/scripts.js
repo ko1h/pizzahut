@@ -1,4 +1,13 @@
 
+function PizzaOrder(){
+  this.orders = []
+}
+
+PizzaOrder.prototype.addPizza = function(pizza) {
+  this.orders.push(pizza);
+}
+var pizzaOrder = new PizzaOrder();
+
 function Pizza(name, size, topping) {
   this.name = name,
   this.size = size,
@@ -37,8 +46,6 @@ Pizza.prototype.toppingPrice = function(topping) {
 
 /// user interface logic
 $(document).ready(function(){
-  var topOption = ["cheese", "icecream", "wholefish", "more pizza"];
-  // populateTopping(topOption);
   $("#pizzaHut").submit(function(event){
     event.preventDefault();
     var inputName = $("input#nameInput").val();
@@ -46,9 +53,9 @@ $(document).ready(function(){
     var inputTopping = $("#topInput").val();
 
 
-    var newPizza = new Pizza(inputName, inputSize, inputTopping)
-    console.log(inputSize)
-    $("#result").text(newPizza);
-    console.log(newPizza)
+    var newPizza = new Pizza(inputName, inputSize, inputTopping);
+    pizzaOrder.addPizza(newPizza);
+    // $("#result").append(newPizza);
+    console.log(pizzaOrder.newPizza)
   });
 });
