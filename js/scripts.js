@@ -3,10 +3,10 @@ function Pizza(name, size, topping) {
   this.name = name,
   this.size = size,
   this.topping = topping
-  // this.toppingPrice = toppingPrice
+  this.itemPrice = 0
   this.price = 10;
   this.sizePrice();
-  // this.totalPrice();
+  this.toppingPrice();
 }
 
 Pizza.prototype.sizePrice = function(size) {
@@ -20,19 +20,20 @@ Pizza.prototype.sizePrice = function(size) {
       this.price -= 3;
     }
 }
-// Pizza.prototype.toppingPrice = function() {
-//   forEach
-// }
-
-// Pizza.prototype.totalPrice = function(){
-//   this.sizePrice += this.toppingPrice
-// }
-
-// function populateTopping(topOptions) {
-//   topOptions.forEach(function(topOption) {
-//     $("#toppping").append(topOption);
-//   });
-// }
+Pizza.prototype.toppingPrice = function(topping) {
+  if(this.topping === "icecream") {
+    this.itemPrice =+ 3;
+  }
+  else if(this.topping === "aligator") {
+    this.itemPrice =+ 7;
+  }
+  else if(this.topping === "whole fish") {
+    this.itemPrice -= 5;
+  }
+  else if(this.topping === "more pizza") {
+    this.itemPrice =+ 10;
+  }
+}
 
 /// user interface logic
 $(document).ready(function(){
