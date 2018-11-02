@@ -2,9 +2,9 @@ function Pizza(name, size, topping) {
   this.name = name,
   this.size = size,
   this.topping = topping
-  this.price = 10;
-  this.sizePrice();
-  this.toppingPrice();
+  // this.price = 10;
+  // this.sizePrice();
+  // this.toppingPrice();
 }
 
 Pizza.prototype.sizePrice = function(size) {
@@ -39,10 +39,13 @@ $(document).ready(function(){
     var inputName = $("input#nameInput").val();
     var inputSize = $("#sizeInput").val();
     var inputTopping = $("#topInput").val();
+    console.log(inputName)
+    console.log(inputSize)
+    console.log(inputTopping)
 
 
     var newPizza = new Pizza(inputName, inputSize, inputTopping);
-    $("#result").text(Pizza);
+    $("#result").text(newPizza);
     console.log(newPizza)
   });
 });
