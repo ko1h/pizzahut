@@ -1,25 +1,17 @@
-///Business logic
-function PizzaOrder() {
-  this.pizzas = []
-}
 
-PizzaOrder.prototype.addPizzaOder = function(UserPizza) {
-  this.pizzas.push(UserPizza);
-}
-
-function UserPizza (name, size, topping) {
+function Pizza(name, size, topping) {
   this.name = name,
   this.size = size,
   this.topping = topping
-  this.sizePrice =sizePrice
-  this.toppingPrice = toppingPrice
-  this.Price = 10;
-  this.totalPrice = 0;
+  // this.toppingPrice = toppingPrice
+  this.price = 10;
+  this.sizePrice();
+  // this.totalPrice();
 }
 
-UserPizza.prototype.sizePrice = function() {
+Pizza.prototype.sizePrice = function(size) {
   if(this.size === "orignal") {
-    this.price = 10;
+    this.price == 10;
     }
     else if (this.size === "Large") {
       this.price += 3;
@@ -28,14 +20,14 @@ UserPizza.prototype.sizePrice = function() {
       this.price -= 3;
     }
 }
+// Pizza.prototype.toppingPrice = function() {
+//   forEach
+// }
 
-UserPizza.prototype.toppingPrice = function() {
-  forEach
-}
+// Pizza.prototype.totalPrice = function(){
+//   this.sizePrice += this.toppingPrice
+// }
 
-Userpizza.prototype.total = function(){
-  this.sizePrice += this.toppingPrice
-}
 // function populateTopping(topOptions) {
 //   topOptions.forEach(function(topOption) {
 //     $("#toppping").append(topOption);
@@ -44,17 +36,18 @@ Userpizza.prototype.total = function(){
 
 /// user interface logic
 $(document).ready(function(){
-  // var topOption = ["cheese", "icecream", "wholefish", "more pizza"];
+  var topOption = ["cheese", "icecream", "wholefish", "more pizza"];
   // populateTopping(topOption);
-  $("#pizza").submit(function(event){
-    even.preventDefault();
+  $("#pizzaHut").submit(function(event){
+    event.preventDefault();
     var inputName = $("input#nameInput").val();
-    var inputSize = $("input#pizzaSize").val();
-    var inputTopping = $("input#topping").val();
-    return;
+    var inputSize = $("#sizeInput").val();
+    var inputTopping = $("#topInput").val();
 
-    var
-    $("#result").show();
-    $("#result").text(result);
+
+    var newPizza = new Pizza(inputName, inputSize, inputTopping)
+    console.log(inputSize)
+    $("#result").text(newPizza);
+    console.log(newPizza)
   });
 });
