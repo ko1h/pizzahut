@@ -1,6 +1,6 @@
-# _Beep Boop_
+# _Pizza Hut_
 
-#### _Turn numbers into Roman Numerals, 25 Oct 2018_
+#### _Ordering a pizza with size and topping choices, 2 Nov 2018_
 
 #### By _** Kohichi Horii**_
 
