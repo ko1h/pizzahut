@@ -4,25 +4,25 @@ function Pizza(name, size, topping) {
   this.topping = topping
 }
 
-Pizza.prototype.totalPrice = function(size) {
-  var pizzaPrice =10;
-  if(this.size === "orignal") {
-    pizzaPrice = 10;
+Pizza.prototype.totalPrice = function() {
+  var pizzaPrice = 10;
+  if((this.size === "orignal") && (this.topping === "icecream")) {
+    pizzaPrice += 3;
     }
-    else if (this.size === "Large") {
-      pizzaPrice += 3;
+    else if ((this.size === "orignal") && (this.topping === "aligator")) {
+      pizzaPrice += 5;
     }
-    else if (this.size === "small") {
-      pizzaPrice -=3;
+    else if ((this.size === "orignal") && (this.topping === "whole fish")){
+      pizzaPrice -= 5;
     }
     else if(this.topping === "icecream") {
-    pizzaPrice +=3;
+    pizzaPrice += 3;
     }
     else if(this.topping === "aligator") {
-    pizzaPrice +=5;
+    pizzaPrice += 5;
     }
     else if(this.topping === "whole fish") {
-    pizzaPrice -=2;
+    pizzaPrice -= 2;
     }
     else if(this.topping === "more pizza") {
     pizzaPrice += 10;
