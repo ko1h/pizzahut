@@ -1,18 +1,8 @@
-
-function PizzaOrder(){
-  this.orders = []
-}
-
-PizzaOrder.prototype.addPizza = function(pizza) {
-  this.orders.push(pizza);
-}
-var pizzaOrder = new PizzaOrder();
-
 function Pizza(name, size, topping) {
   this.name = name,
   this.size = size,
   this.topping = topping
-  this.itemPrice = 0
+  this.total = total
   this.price = 10;
   this.sizePrice();
   this.toppingPrice();
@@ -54,8 +44,7 @@ $(document).ready(function(){
 
 
     var newPizza = new Pizza(inputName, inputSize, inputTopping);
-    pizzaOrder.addPizza(newPizza);
-    // $("#result").append(newPizza);
-    console.log(pizzaOrder.newPizza)
+    $("#result").text(newPizza);
+    console.log(newPizza)
   });
 });
