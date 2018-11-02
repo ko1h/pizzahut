@@ -3,8 +3,8 @@ function PizzaOrder() {
   this.pizzas = []
 }
 
-PizzaOrder.prototype.addPizzaOder = function(userPizza) {
-  this.UserPizzas.push(userPizza;
+PizzaOrder.prototype.addPizzaOder = function(UserPizza) {
+  this.pizzas.push(UserPizza);
 }
 
 function UserPizza (name, size, topping) {
