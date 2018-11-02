@@ -2,7 +2,6 @@ function Pizza(name, size, topping) {
   this.name = name,
   this.size = size,
   this.topping = topping
-  this.total = total
   this.price = 10;
   this.sizePrice();
   this.toppingPrice();
@@ -33,7 +32,6 @@ Pizza.prototype.toppingPrice = function(topping) {
     this.itemPrice =+ 10;
   }
 }
-
 /// user interface logic
 $(document).ready(function(){
   $("#pizzaHut").submit(function(event){
@@ -44,7 +42,7 @@ $(document).ready(function(){
 
 
     var newPizza = new Pizza(inputName, inputSize, inputTopping);
-    $("#result").text(newPizza);
+    $("#result").text(Pizza);
     console.log(newPizza)
   });
 });
