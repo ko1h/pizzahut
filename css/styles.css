@@ -1,8 +1,8 @@
 body {
   font-family: courier;
   background-color: gray;
-  color: white;
+  color: black;
 }
 .container {
-  background-color: #ADD8E6;
+  /* background-color: #ADD8E6; */
   padding: 40px;
