@@ -17,7 +17,7 @@ Pizza.prototype.totalPizza = function() {
   for (var i = 0; i < this.totalPizzaChoice.length; i++) {
     this.total += this.totalPizzaChoice[i];
   }
-  return this.total;
+  return this.name + " " + this.total + " Dollars is your total";
 }
 $(document).ready(function(){
   $("#pizzaHut").submit(function(event){
