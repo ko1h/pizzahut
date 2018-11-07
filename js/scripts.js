@@ -19,34 +19,6 @@ Pizza.prototype.totalPizza = function() {
   }
   return this.total;
 }
-
-
-// Pizza.prototype.totalPrice = function() {
-//   var pizzaPrice = 0;
-//   if((this.size === "orignal") && (this.topping === "icecream")) {
-//     pizzaPrice += 3;
-//     }
-//     else if ((this.size === "orignal") && (this.topping === "aligator")) {
-//       pizzaPrice += 5;
-//     }
-//     else if ((this.size === "orignal") && (this.topping === "whole fish")){
-//       pizzaPrice -= 5;
-//     }
-//     else if(this.topping === "icecream") {
-//     pizzaPrice += 3;
-//     }
-//     else if(this.topping === "aligator") {
-//     pizzaPrice += 5;
-//     }
-//     else if(this.topping === "whole fish") {
-//     pizzaPrice -= 2;
-//     }
-//     else if(this.topping === "more pizza") {
-//     pizzaPrice += 10;
-//     }
-//     return pizzaPrice;
-// };
-/// user interface logic
 $(document).ready(function(){
   $("#pizzaHut").submit(function(event){
     event.preventDefault();
@@ -58,11 +30,9 @@ $(document).ready(function(){
 
 
     var newPizza = new Pizza(name, size, topping);
-    // var sizeMoney = parseInt($(".sizeInput").val());
+
     newPizza.pizzaChoice();
 
-
-    // $("#result").text(newPizza.totalPrice());
     if (size === "1") {
       $("#result").text(newPizza.totalPizza());
     } else if (size === "2") {
