@@ -5,7 +5,7 @@ function Pizza(name, size, topping) {
 }
 
 Pizza.prototype.totalPrice = function() {
-  var pizzaPrice = 10;
+  var pizzaPrice = 0;
   if((this.size === "orignal") && (this.topping === "icecream")) {
     pizzaPrice += 3;
     }

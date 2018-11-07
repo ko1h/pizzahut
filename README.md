@@ -6,12 +6,17 @@
 
 ## Description
 
+_Program takes a order_
+_Customer can choose between small, original or large_
+_customer can choose between four different toppings_
+_program will then calculate the difference_
+_program will give back the total price of the pizza_
 
 
 ## Setup/Installation Requirements
 
 * _Clone Repository_
-*_github link https://github.com/ko1h/beepboop.git
+*_github link https://github.com/ko1h/pizzahut.git
 * _Open folder_
 * _Open index.html_
 
