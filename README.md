@@ -6,11 +6,11 @@
 
 ## Description
 
-_Program takes a order_
-_Customer can choose between small, original or large_
-_customer can choose between four different toppings_
-_program will then calculate the difference_
-_program will give back the total price of the pizza_
+*_Program takes a order_
+*_Customer can choose between small, original or large_
+*_customer can choose between four different toppings_
+*_program will then calculate the difference_
+*_program will give back the total price of the pizza_
 
 
 ## Setup/Installation Requirements
